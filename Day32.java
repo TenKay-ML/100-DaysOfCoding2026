@@ -3,21 +3,23 @@ public class belajar {
     public static void main(String[] args) {
       Scanner al = new Scanner(System.in);
 
-      System.out.print("Masukkan Nilai : ");
+      System.out.print("Masukkan Nilai UTS: ");
       int A = al.nextInt();
+
+      System.out.print("Masukkan Nilai UAS: ");
+      int B = al.nextInt();
       
-      System.out.println("\n===Operator Perbandingan===");
-      System.out.println(A > 70);
-      System.out.println(A < 70);
-      System.out.println(A >= 70);
-      System.out.println(A <= 70);
-      System.out.println(A == 70);
-      System.out.println(A != 70);
+     //opertor aritmatika
+      int C = A + B;
+      double rata = C / 2;
+      System.out.println("Rata-rata nilai : " + rata);
 
-      System.out.println("\n===Operator Logika===");
-      System.out.println(A > 70 && A < 100);
-      System.out.println(A < 70 || A > 100);
-      System.out.println(!(A >= 70));
+      //operator perbandingan
+      System.out.println("Status Mahasiswa: " + (rata >= 75 ? "Lulus" : "Tidak Lulus"));
 
+      //operator logika
+      System.out.println("Nilai UTS valid: " + (A > 75 && A < 100));
+      System.out.println("Nilai UAS valid: " + (B > 75 && B < 100));
+      
     }
 }
